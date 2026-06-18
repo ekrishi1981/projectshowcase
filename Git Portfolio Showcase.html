@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineering &amp; Generative AI Portfolio Showcase</title>
+    <!-- Google Fonts: Space Grotesk for technical/executive headers, Inter for ultra-clean body copy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for modern interface icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hide scrollbars for crisp presentation canvas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-300 min-h-screen flex items-center justify-center p-0 m-0 overflow-x-hidden">
+
+<!-- Standard Widescreen 16:9 Slide Canvas (1280x720) with active responsiveness fallbacks -->
+<div class="w-[1280px] h-[720px] bg-white rounded-none border border-slate-200 shadow-2xl relative flex flex-col justify-between p-[30px] md:p-[40px] overflow-hidden select-none" 
+     style="background-image: radial-gradient(circle at 10% 20%, rgba(2, 132, 199, 0.04) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(13, 148, 136, 0.03) 0%, transparent 40%);">
+
+    <!-- Slide Widescreen Header -->
+    <header class="flex justify-between items-start border-b border-slate-100 pb-4 h-[75px]">
+        <div class="flex flex-col">
+            <h1 class="font-display text-[26px] font-bold tracking-tight bg-gradient-to-r from-sky-600 to-teal-600 bg-clip-text text-transparent uppercase">
+                Data Engineering &amp; Generative AI Portfolio
+            </h1>
+            <span class="text-[12px] text-slate-500 font-semibold tracking-wider uppercase mt-1">
+                Git Hub Repository Showcase • Production Architectures &amp; Specifications
+            </span>
+        </div>
+        <div class="flex gap-2">
+            <a href="https://github.com/ekrishi1981/projectshowcase" target="_blank" 
+               class="bg-sky-50 border border-sky-200 text-sky-700 px-4 py-2 rounded-lg text-[11px] font-bold uppercase tracking-wider flex items-center gap-2 hover:bg-sky-100 transition-all duration-200">
+                <i class="fa-brands fa-github text-[14px]"></i> github.com/ekrishi1981/projectshowcase
+            </a>
+        </div>
+    </header>
+
+    <!-- Two Column Main Body Grid -->
+    <main class="grid grid-cols-12 gap-8 h-[540px] mt-4">
+        
+        <!-- Left Side Column: Portfolio Overview & Intro -->
+        <section class="col-span-4 flex flex-col justify-between h-full pr-4 border-r border-slate-100">
+            <div class="flex flex-col gap-4">
+                <div class="bg-slate-50 border border-slate-200 border-l-4 border-sky-500 rounded-xl p-5">
+                    <span class="text-[10px] font-bold text-sky-600 tracking-widest uppercase block mb-1">
+                        Curated Collection
+                    </span>
+                    <h2 class="font-display text-[20px] font-bold text-slate-900 leading-snug">
+                        Git Repository Project Showcase
+                    </h2>
+                    <p class="text-[12.5px] text-slate-600 leading-relaxed mt-3">
+                        Below is a curated selection of elite solutions spanning Generative AI, AI Agentic Workflows, and Modern Databricks Lakehouse Data Engineering.
+                    </p>
+                    <p class="text-[12.5px] text-slate-600 leading-relaxed mt-2">
+                        Explore individual specifications to analyze business challenges, value matrix realizations, and detailed system architecture pipelines.
+                    </p>
+                </div>
+
+                <div class="bg-teal-50/50 border border-teal-100 rounded-xl p-5 flex flex-col gap-2">
+                    <span class="text-[9px] font-bold text-teal-700 tracking-wider uppercase flex items-center gap-1.5">
+                        <i class="fa-solid fa-layer-group"></i> Architecture Matrix
+                    </span>
+                    <ul class="text-[11.5px] text-slate-600 space-y-1.5 mt-1">
+                        <li class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
+                            Production-grade Databricks Lakehouses
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
+                            Enterprise RAG &amp; Agentic AI pipelines
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
+                            Interactive natural language query engines
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Repository Quick Stats Summary Card -->
+            <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-xl p-4 shadow-md flex items-center justify-between">
+                <div class="flex flex-col">
+                    <span class="text-[10px] font-semibold text-sky-400 tracking-wider uppercase">Project Scope</span>
+                    <span class="text-[18px] font-display font-bold mt-0.5">5 Global Deployments</span>
+                </div>
+                <div class="flex gap-3 text-right">
+                    <div class="flex flex-col">
+                        <span class="text-[10px] text-slate-400 uppercase">Tech Stack</span>
+                        <span class="text-[12px] font-bold text-teal-300 mt-0.5">Python &amp; SQL</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Side Column: Dense Project Row Stack -->
+        <section class="col-span-8 flex flex-col justify-between h-full py-1">
+            <div class="flex flex-col gap-3 overflow-y-auto no-scrollbar max-h-[530px]">
+                
+                <!-- Project Row 1: Supply Chain Analytics -->
+                <article class="group bg-white border border-slate-200 rounded-xl p-4 flex justify-between items-center hover:border-sky-500 hover:shadow-md transition-all duration-200 cursor-pointer"
+                         onclick="openDrawer('supply-chain')">
+                    <div class="flex items-center gap-4 w-[82%]">
+                        <div class="w-12 h-12 bg-sky-50 rounded-lg flex items-center justify-center text-sky-600 text-[18px] group-hover:bg-sky-500 group-hover:text-white transition-all duration-200">
+                            <i class="fa-solid fa-truck-ramp-box"></i>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2.5">
+                                <h3 class="font-display text-[14.5px] font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
+                                    Supply Chain Analytics on Databricks
+                                </h3>
+                                <span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded text-[9.5px] font-semibold uppercase tracking-wider">
+                                    Lakehouse
+                                </span>
+                            </div>
+                            <p class="text-[11.5px] text-slate-500 line-clamp-1">
+                                Built on Databricks and Unity Catalog, this solution uses Medallion Architecture, CDC, and SCD Type 2 to deliver scalable supply chain visibility.
+                            </p>
+                            <div class="flex gap-2 mt-1">
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">Python</span>
+                                <span class="text-[9.5px] text-slate-400">•</span>
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">SCD Type 2</span>
+                                <span class="text-[9.5px] text-slate-400">•</span>
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">Unity Catalog</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="bg-slate-50 text-slate-700 hover:bg-sky-600 hover:text-white group-hover:bg-sky-600 group-hover:text-white px-3.5 py-2 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all duration-200">
+                        Explore
+                    </button>
+                </article>
+
+                <!-- Project Row 2: Movie Streaming Analytics -->
+                <article class="group bg-white border border-slate-200 rounded-xl p-4 flex justify-between items-center hover:border-sky-500 hover:shadow-md transition-all duration-200 cursor-pointer"
+                         onclick="openDrawer('streaming-analytics')">
+                    <div class="flex items-center gap-4 w-[82%]">
+                        <div class="w-12 h-12 bg-sky-50 rounded-lg flex items-center justify-center text-sky-600 text-[18px] group-hover:bg-sky-500 group-hover:text-white transition-all duration-200">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2.5">
+                                <h3 class="font-display text-[14.5px] font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
+                                    Movie Streaming Analytics on Databricks
+                                </h3>
+                                <span class="bg-slate-100 text-slate-600 px-2 py-0.5 rounded text-[9.5px] font-semibold uppercase tracking-wider">
+                                    Streaming
+                                </span>
+                            </div>
+                            <p class="text-[11.5px] text-slate-500 line-clamp-1">
+                                Transforms continuous JSON/CSV ingestion into golden aggregated media dashboards with robust delta quality pipeline standards.
+                            </p>
+                            <div class="flex gap-2 mt-1">
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">Delta Pipelines</span>
+                                <span class="text-[9.5px] text-slate-400">•</span>
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">PySpark</span>
+                                <span class="text-[9.5px] text-slate-400">•</span>
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">Genie Spaces</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="bg-slate-50 text-slate-700 hover:bg-sky-600 hover:text-white group-hover:bg-sky-600 group-hover:text-white px-3.5 py-2 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all duration-200">
+                        Explore
+                    </button>
+                </article>
+
+                <!-- Project Row 3: Conversational Inventory Copilot -->
+                <article class="group bg-white border border-slate-200 rounded-xl p-4 flex justify-between items-center hover:border-sky-500 hover:shadow-md transition-all duration-200 cursor-pointer"
+                         onclick="openDrawer('inventory')">
+                    <div class="flex items-center gap-4 w-[82%]">
+                        <div class="w-12 h-12 bg-sky-50 rounded-lg flex items-center justify-center text-sky-600 text-[18px] group-hover:bg-sky-500 group-hover:text-white transition-all duration-200">
+                            <i class="fa-solid fa-warehouse"></i>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2.5">
+                                <h3 class="font-display text-[14.5px] font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
+                                    Conversational Inventory Copilot
+                                </h3>
+                                <span class="bg-sky-50 text-sky-700 px-2 py-0.5 rounded text-[9.5px] font-semibold uppercase tracking-wider">
+                                    GenAI Agent
+                                </span>
+                            </div>
+                            <p class="text-[11.5px] text-slate-500 line-clamp-1">
+                                Generates secure SQL conversions from natural language text to query multi-tier inventory parameters and active alert limits.
+                            </p>
+                            <div class="flex gap-2 mt-1">
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">Supply Chain AI</span>
+                                <span class="text-[9.5px] text-slate-400">•</span>
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">LangChain</span>
+                                <span class="text-[9.5px] text-slate-400">•</span>
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">Text-to-SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="bg-slate-50 text-slate-700 hover:bg-sky-600 hover:text-white group-hover:bg-sky-600 group-hover:text-white px-3.5 py-2 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all duration-200">
+                        Explore
+                    </button>
+                </article>
+
+                <!-- Project Row 4: HR Policy Intelligence Agent -->
+                <article class="group bg-white border border-slate-200 rounded-xl p-4 flex justify-between items-center hover:border-sky-500 hover:shadow-md transition-all duration-200 cursor-pointer"
+                         onclick="openDrawer('hr-policy')">
+                    <div class="flex items-center gap-4 w-[82%]">
+                        <div class="w-12 h-12 bg-sky-50 rounded-lg flex items-center justify-center text-sky-600 text-[18px] group-hover:bg-sky-500 group-hover:text-white transition-all duration-200">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2.5">
+                                <h3 class="font-display text-[14.5px] font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
+                                    HR Policy Intelligence Agent
+                                </h3>
+                                <span class="bg-sky-50 text-sky-700 px-2 py-0.5 rounded text-[9.5px] font-semibold uppercase tracking-wider">
+                                    GenAI Agent
+                                </span>
+                            </div>
+                            <p class="text-[11.5px] text-slate-500 line-clamp-1">
+                                Orchestrates multi-policy employee intent validation using RAG standards, minimizing administrative leave tracking workload.
+                            </p>
+                            <div class="flex gap-2 mt-1">
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">HR Tech AI</span>
+                                <span class="text-[9.5px] text-slate-400">•</span>
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">RAG Ingestion</span>
+                                <span class="text-[9.5px] text-slate-400">•</span>
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">Semantic Search</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="bg-slate-50 text-slate-700 hover:bg-sky-600 hover:text-white group-hover:bg-sky-600 group-hover:text-white px-3.5 py-2 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all duration-200">
+                        Explore
+                    </button>
+                </article>
+
+                <!-- Project Row 5: Enterprise Knowledge Intelligence -->
+                <article class="group bg-white border border-slate-200 rounded-xl p-4 flex justify-between items-center hover:border-sky-500 hover:shadow-md transition-all duration-200 cursor-pointer"
+                         onclick="openDrawer('kip')">
+                    <div class="flex items-center gap-4 w-[82%]">
+                        <div class="w-12 h-12 bg-sky-50 rounded-lg flex items-center justify-center text-sky-600 text-[18px] group-hover:bg-sky-500 group-hover:text-white transition-all duration-200">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <div class="flex items-center gap-2.5">
+                                <h3 class="font-display text-[14.5px] font-bold text-slate-900 group-hover:text-sky-600 transition-colors">
+                                    Enterprise Knowledge Intelligence
+                                </h3>
+                                <span class="bg-sky-50 text-sky-700 px-2 py-0.5 rounded text-[9.5px] font-semibold uppercase tracking-wider">
+                                    Knowledge Platform
+                                </span>
+                            </div>
+                            <p class="text-[11.5px] text-slate-500 line-clamp-1">
+                                Converts heavy legal-dense business manuals and corporate handbook assets into summarized portable analytical outlines.
+                            </p>
+                            <div class="flex gap-2 mt-1">
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">OpenAI</span>
+                                <span class="text-[9.5px] text-slate-400">•</span>
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">Summarization</span>
+                                <span class="text-[9.5px] text-slate-400">•</span>
+                                <span class="text-[9.5px] text-slate-400 font-semibold uppercase">Document Interrogation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="bg-slate-50 text-slate-700 hover:bg-sky-600 hover:text-white group-hover:bg-sky-600 group-hover:text-white px-3.5 py-2 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all duration-200">
+                        Explore
+                    </button>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Drawer Overlay panel -->
+    <div id="drawerOverlay" class="absolute inset-0 bg-slate-900/40 opacity-0 pointer-events-none transition-opacity duration-300 z-40" onclick="closeDrawer()"></div>
+    
+    <!-- Detail Specification Sliding Drawer -->
+    <aside id="detailDrawer" class="absolute top-[30px] right-[-500px] w-[460px] h-[660px] bg-white border border-slate-200 shadow-2xl rounded-l-2xl z-50 p-6 flex flex-col justify-between transition-all duration-300 transform ease-in-out">
+        <div>
+            <!-- Drawer Header -->
+            <div class="flex justify-between items-start pb-4 border-b border-slate-100">
+                <div class="flex flex-col gap-1">
+                    <span id="drawerBadge" class="bg-slate-100 text-slate-700 px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider self-start"></span>
+                    <h3 id="drawerTitle" class="font-display text-[18px] font-bold text-slate-900 mt-1 leading-tight"></h3>
+                </div>
+                <button onclick="closeDrawer()" class="text-slate-400 hover:text-slate-600 text-[18px]">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Drawer Scrollable Content -->
+            <div class="mt-5 flex flex-col gap-5 overflow-y-auto no-scrollbar max-h-[460px]">
+                
+                <!-- Business challenge panel block -->
+                <div class="flex flex-col gap-2">
+                    <span class="text-[10px] font-bold text-sky-700 tracking-wider uppercase flex items-center gap-1.5">
+                        <i class="fa-solid fa-triangle-exclamation"></i> Business Challenge
+                    </span>
+                    <p id="drawerChallenge" class="text-[12.5px] text-slate-600 leading-relaxed"></p>
+                </div>
+
+                <!-- Solution implementation block -->
+                <div class="flex flex-col gap-2">
+                    <span class="text-[10px] font-bold text-teal-700 tracking-wider uppercase flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-check"></i> Solution Overview
+                    </span>
+                    <p id="drawerSolution" class="text-[12.5px] text-slate-600 leading-relaxed"></p>
+                </div>
+
+                <!-- Technical Pillars Tags -->
+                <div class="flex flex-col gap-2">
+                    <span class="text-[10px] font-bold text-slate-700 tracking-wider uppercase">
+                        Technical Pillars
+                    </span>
+                    <div id="drawerPillars" class="flex flex-wrap gap-1.5"></div>
+                </div>
+
+                <!-- Value Realization Matrix -->
+                <div class="flex flex-col gap-2">
+                    <span class="text-[10px] font-bold text-slate-700 tracking-wider uppercase">
+                        Realized Target Value State
+                    </span>
+                    <div id="drawerMetricTable" class="border border-slate-100 rounded-lg overflow-hidden">
+                        <table class="w-full text-left text-[11.5px] border-collapse">
+                            <thead class="bg-slate-50 border-b border-slate-100">
+                                <tr>
+                                    <th class="p-2 font-semibold text-slate-600">Metric Track</th>
+                                    <th class="p-2 font-semibold text-slate-600">Target Value</th>
+                                </tr>
+                            </thead>
+                            <tbody id="drawerMetricRows" class="text-slate-600 divide-y divide-slate-100"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Action Link button inside Drawer Footer -->
+        <div class="pt-4 border-t border-slate-100 flex gap-2">
+            <button id="drawerOpenSlideBtn" class="flex-1 bg-gradient-to-r from-sky-600 to-teal-600 hover:from-sky-700 hover:to-teal-700 text-white py-2.5 rounded-lg text-[11px] font-bold uppercase tracking-wider transition-all shadow-sm">
+                Open Architectural Slide
+            </button>
+        </div>
+    </aside>
+
+    <!-- Slide Footer -->
+    <footer class="flex justify-between items-center border-t border-slate-100 pt-3 h-[45px]">
+        <span class="text-[10.5px] text-slate-400 font-medium">
+            Designed for Google Widescreen Displays • 16:9 Aspect Ratio
+        </span>
+        <div class="flex items-center gap-1 text-[10.5px] text-slate-400 font-semibold tracking-widest uppercase">
+            <span class="text-sky-600">Slide Suite</span> <span class="text-slate-300">|</span> Page 01/01
+        </div>
+    </footer>
+
+</div>
+
+<script>
+    // Comprehensive Local Data representing specification maps
+    const projectsData = {
+        'supply-chain': {
+            badge: 'Lakehouse Architecture',
+            title: 'Supply Chain Analytics on Databricks',
+            challenge: 'Fragmented data structures isolated across warehouse silos and PO fulfillment pipelines lower reactive supply agility.',
+            solution: 'Medallion Architecture continuous Autoloader setup integrated with CDC MERGE pipelines to preserve full tracking state histories (SCD Type 2).',
+            pillars: ['Databricks', 'Delta Lake', 'CDC', 'SCD Type 2', 'Unity Catalog', 'PySpark'],
+            metrics: [
+                { track: 'Supply Visibility', value: 'Enhanced Integrity' },
+                { track: 'Reporting Latency', value: 'Reduced Near Real-Time' },
+                { track: 'Supplier Auditing', value: 'Complete Versioning History' }
+            ],
+            slideFile: 'one_pager_supply_chain.html'
+        },
+        'streaming-analytics': {
+            badge: 'Streaming Architecture',
+            title: 'Movie Streaming Analytics on Databricks',
+            challenge: 'High-volume user event interaction logs (clicks, views, queries) exist in unstructured silos, stalling curation speeds.',
+            solution: 'Continuous append-only ingestion bronze storage processing silver cleansed datasets with conformed gold metrics delivered to Genie search interfaces.',
+            pillars: ['Lakehouse', 'Continuous Auto-Loader', 'Delta Pipelines', 'PySpark', 'Genie Space'],
+            metrics: [
+                { track: 'Stream Latency', value: 'Drastically Diminished' },
+                { track: 'BI Decisioning', value: 'Self-Service Conversational' },
+                { track: 'Data Scale Volume', value: 'Multi-Million Batch Sync' }
+            ],
+            slideFile: 'one_pager_streaming_analytics.html'
+        },
+        'one-pager-presentation': {
+            badge: 'GenAI KM Platform',
+            title: 'Knowledge Intelligence Platform',
+            desc: 'Transforms unstructured documents (PDFs, reports) into brief action metrics and interactive interrogation vectors.',
+            challenges: 'Information Overload, Process Bottlenecks, and Silo Risks.',
+            value: [
+                { area: 'Intake Velocity', impact: 'Accelerated' },
+                { area: 'Workforce Productivity', impact: 'Increased Focus Hours' }
+            ]
+        },
+        'one_pager_inventory': {
+            badge: 'Supply Chain AI',
+            title: 'Inventory Intelligence Copilot',
+            desc: 'Natural language dialogue workspace predicting stockout exposures and recommending optimal replenishment rates.',
+            challenges: 'Fragmented Regional Metrics, Obsolete Asset Backlogs, and Development Backlogs.',
+            value: [
+                { area: 'Stockout Prevention', impact: 'Algorithmic Safeguards' },
+                { area: 'Capital Released', impact: 'Obsolete Inventory Reductions' }
+            ]
+        },
+        'hr-policy': {
+            badge: 'GenAI Agent',
+            title: 'HR Policy Intelligence Agent',
+            challenge: 'Repetitive leave lookups and policy queries overtax standard helpdesk channels, creating massive administrative backlogs.',
+            solution: 'Orchestrates leaves and medical parameter queries within strict conversational constraints semantic-bounded by company policy documents.',
+            pillars: ['HR Tech AI', 'Semantic Search', 'Leave RAG Ingestion', 'Intent Parsing', 'LangChain'],
+            metrics: [
+                { track: 'HR Admin Overheads', value: 'Drastically Minimised' },
+                { track: 'Self-Service Reach', value: 'Full 24/7 Availability' },
+                { track: 'Answers Compliance', value: 'Validated Grounding Checks' }
+            ],
+            slideFile: 'one_pager_hr_policy.html'
+        },
+        'kip': {
+            badge: 'Knowledge Platform',
+            title: 'Enterprise Knowledge Intelligence',
+            challenge: 'Corporate handbook sheets and complex legal-dense process assets restrict worker operational onboarding speeds.',
+            solution: 'Automated multi-document semantic summarization engine converting legacy document assets into portable briefs and grounding search vector databases.',
+            pillars: ['OpenAI', 'LangChain', 'NLP Ingestion', 'Summarization', 'Prompt Eng.'],
+            metrics: [
+                { track: 'Research Latency', value: 'Accelerated Intake' },
+                { track: 'Employee Onboarding', value: 'Self-Service Autonomy' },
+                { track: 'Document Transparency', value: 'Context Bounded Checks' }
+            ],
+            slideFile: 'one_pager_presentation.html'
+        },
+        'inventory': {
+            badge: 'GenAI Agent',
+            title: 'Conversational Inventory Copilot',
+            challenge: 'Inventory metric systems locked behind complex database access parameters create critical product planning delays.',
+            solution: 'Converts ad-hoc user query parameters directly into secure database transactions utilizing secure RAG text-to-SQL workflows.',
+            pillars: ['Supply Chain AI', 'LangChain', 'Text-To-SQL', 'Safety Stock Alerting', 'Streamlit'],
+            metrics: [
+                { track: 'Planning Delay', value: 'Instant Access Transparency' },
+                { track: 'Stockout Exposure', value: 'Algorithmic Safety Triggers' },
+                { track: 'Capital Allocation', value: 'Optimized Reordering Recs' }
+            ],
+            slideFile: 'one_pager_inventory.html'
+        }
+    };
+
+    // State Variables for Drawer Control
+    let isDrawerOpen = false;
+    let activeSlideFile = "";
+
+    // Open sliding drawer detail
+    function openDrawer(projectId) {
+        const data = projectsData[projectId];
+        if (!data) return;
+
+        // Set drawer header parameters
+        document.getElementById('drawerBadge').innerText = data.badge;
+        document.getElementById('drawerTitle').innerText = data.title;
+        document.getElementById('drawerChallenge').innerText = data.challenge;
+        document.getElementById('drawerSolution').innerText = data.solution;
+        activeSlideFile = data.slideFile;
+
+        // Populate pillars list
+        const pillarsContainer = document.getElementById('drawerPillars');
+        pillarsContainer.innerHTML = '';
+        data.pillars.forEach(pill => {
+            const span = document.createElement('span');
+            span.className = 'bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md text-[10.5px] font-semibold border border-slate-200';
+            span.innerText = pill;
+            pillarsContainer.appendChild(span);
+        });
+
+        // Populate metrics table rows
+        const rowsContainer = document.getElementById('drawerMetricRows');
+        rowsContainer.innerHTML = '';
+        data.metrics.forEach(row => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td class="p-2 text-slate-700">${row.track}</td>
+                <td class="p-2 text-teal-600 font-bold">${row.value}</td>
+            `;
+            rowsContainer.appendChild(tr);
+        });
+
+        // Sliding animations trigger
+        document.getElementById('drawerOverlay').classList.remove('opacity-0', 'pointer-events-none');
+        document.getElementById('detailDrawer').style.right = '30px';
+        isDrawerOpen = true;
+    }
+
+    // Close sliding drawer panel
+    function closeDrawer() {
+        document.getElementById('drawerOverlay').classList.add('opacity-0', 'pointer-events-none');
+        document.getElementById('detailDrawer').style.right = '-500px';
+        isDrawerOpen = false;
+    }
+
+    // Wire up slide preview launcher
+    document.getElementById('drawerOpenSlideBtn').addEventListener('click', () => {
+        if (activeSlideFile) {
+            window.open(activeSlideFile, '_blank');
+        }
+    });
+</script>
+</body>
+</html>
+```
+eof
