@@ -48,7 +48,7 @@
                 Data Engineering &amp; Generative AI Portfolio
             </h1>
             <span class="text-[12px] text-slate-500 font-semibold tracking-wider uppercase mt-1">
-                Git Hub Repository Showcase • Production Architectures &amp; Specifications
+                GitHub Repository Showcase • Production Architectures &amp; Specifications
             </span>
         </div>
         <div class="flex gap-2">
@@ -137,7 +137,7 @@
                                 </span>
                             </div>
                             <p class="text-[11.5px] text-slate-500 line-clamp-1">
-                                Built on Databricks and Unity Catalog, this solution uses Medallion Architecture, CDC, and SCD Type 2 to deliver scalable supply chain visibility.
+                                Built on Databricks and Unity Catalog, this Supply Chain Analytics solution uses Medallion Architecture, CDC, and SCD Type 2 to deliver scalable supply chain visibility, reliable data pipelines, and actionable KPIs for analytics, operations, and AI-driven optimization.
                             </p>
                             <div class="flex gap-2 mt-1">
                                 <span class="text-[9.5px] text-slate-400 font-semibold uppercase">Python</span>
@@ -354,10 +354,10 @@
             </div>
         </div>
 
-        <!-- Action Link button inside Drawer Footer -->
+        <!-- Action Link buttons inside Drawer Footer -->
         <div class="pt-4 border-t border-slate-100 flex gap-2">
-            <button id="drawerOpenSlideBtn" class="flex-1 bg-gradient-to-r from-sky-600 to-teal-600 hover:from-sky-700 hover:to-teal-700 text-white py-2.5 rounded-lg text-[11px] font-bold uppercase tracking-wider transition-all shadow-sm">
-                Open Architectural Slide
+            <button id="drawerOpenSlideBtn" class="flex-1 bg-gradient-to-r from-sky-600 to-teal-600 hover:from-sky-700 hover:to-teal-700 text-white py-2.5 rounded-lg text-[11px] font-bold uppercase tracking-wider transition-all shadow-sm flex items-center justify-center gap-2">
+                <i class="fa-solid fa-display"></i> Open Project Slide
             </button>
         </div>
     </aside>
@@ -375,7 +375,7 @@
 </div>
 
 <script>
-    // Comprehensive Local Data representing specification maps
+    // Comprehensive Local Data with live GitHub Pages slides and repository paths
     const projectsData = {
         'supply-chain': {
             badge: 'Lakehouse Architecture',
@@ -388,7 +388,7 @@
                 { track: 'Reporting Latency', value: 'Reduced Near Real-Time' },
                 { track: 'Supplier Auditing', value: 'Complete Versioning History' }
             ],
-            slideFile: 'one_pager_supply_chain.html'
+            slideFile: './Databricks/Supply Chain Analytics on Databricks.html'
         },
         'streaming-analytics': {
             badge: 'Streaming Architecture',
@@ -401,27 +401,7 @@
                 { track: 'BI Decisioning', value: 'Self-Service Conversational' },
                 { track: 'Data Scale Volume', value: 'Multi-Million Batch Sync' }
             ],
-            slideFile: 'one_pager_streaming_analytics.html'
-        },
-        'one-pager-presentation': {
-            badge: 'GenAI KM Platform',
-            title: 'Knowledge Intelligence Platform',
-            desc: 'Transforms unstructured documents (PDFs, reports) into brief action metrics and interactive interrogation vectors.',
-            challenges: 'Information Overload, Process Bottlenecks, and Silo Risks.',
-            value: [
-                { area: 'Intake Velocity', impact: 'Accelerated' },
-                { area: 'Workforce Productivity', impact: 'Increased Focus Hours' }
-            ]
-        },
-        'one_pager_inventory': {
-            badge: 'Supply Chain AI',
-            title: 'Inventory Intelligence Copilot',
-            desc: 'Natural language dialogue workspace predicting stockout exposures and recommending optimal replenishment rates.',
-            challenges: 'Fragmented Regional Metrics, Obsolete Asset Backlogs, and Development Backlogs.',
-            value: [
-                { area: 'Stockout Prevention', impact: 'Algorithmic Safeguards' },
-                { area: 'Capital Released', impact: 'Obsolete Inventory Reductions' }
-            ]
+            slideFile: './Databricks/Movie Streaming Analytics on Databricks.html'
         },
         'hr-policy': {
             badge: 'GenAI Agent',
@@ -434,7 +414,7 @@
                 { track: 'Self-Service Reach', value: 'Full 24/7 Availability' },
                 { track: 'Answers Compliance', value: 'Validated Grounding Checks' }
             ],
-            slideFile: 'one_pager_hr_policy.html'
+            slideFile: './AIUseCase/HR Policy Intelligence Agent.html'
         },
         'kip': {
             badge: 'Knowledge Platform',
@@ -447,7 +427,7 @@
                 { track: 'Employee Onboarding', value: 'Self-Service Autonomy' },
                 { track: 'Document Transparency', value: 'Context Bounded Checks' }
             ],
-            slideFile: 'one_pager_presentation.html'
+            slideFile: './AIUseCase/Enterprise Knowledge Intelligence Platform.html'
         },
         'inventory': {
             badge: 'GenAI Agent',
@@ -460,13 +440,14 @@
                 { track: 'Stockout Exposure', value: 'Algorithmic Safety Triggers' },
                 { track: 'Capital Allocation', value: 'Optimized Reordering Recs' }
             ],
-            slideFile: 'one_pager_inventory.html'
+            slideFile: './AIUseCase/Conversational Inventory Intelligence Copilot.html'
         }
     };
 
     // State Variables for Drawer Control
     let isDrawerOpen = false;
     let activeSlideFile = "";
+    let activeRepoFile = "";
 
     // Open sliding drawer detail
     function openDrawer(projectId) {
@@ -479,6 +460,7 @@
         document.getElementById('drawerChallenge').innerText = data.challenge;
         document.getElementById('drawerSolution').innerText = data.solution;
         activeSlideFile = data.slideFile;
+        activeRepoFile = data.repoFile;
 
         // Populate pillars list
         const pillarsContainer = document.getElementById('drawerPillars');
@@ -519,6 +501,13 @@
     document.getElementById('drawerOpenSlideBtn').addEventListener('click', () => {
         if (activeSlideFile) {
             window.open(activeSlideFile, '_blank');
+        }
+    });
+
+    // Wire up repository code launcher
+    document.getElementById('drawerOpenRepoBtn').addEventListener('click', () => {
+        if (activeRepoFile) {
+            window.open(activeRepoFile, '_blank');
         }
     });
 </script>
