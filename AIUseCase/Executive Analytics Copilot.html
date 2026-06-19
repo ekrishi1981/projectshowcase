@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Executive Analytics Copilot - One-Pager Showcase</title>
+    <!-- Google Fonts: Space Grotesk for technical/executive headers, Inter for ultra-clean body copy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for professional modern interface icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* RESET AND CORE STYLES */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #cbd5e1; /* Backdrop board context */
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Fixed Dimensions Widescreen Container (1280x720 16:9 widescreen canvas) */
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(2, 132, 199, 0.04) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(13, 148, 136, 0.03) 0%, transparent 40%);
+            color: #0f172a; /* Slate-900 */
+            font-family: 'Inter', sans-serif;
+            padding: 30px 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* HEADER STYLING */
+        .slide-header {
+            display: flex;
+            justify-between: space-between;
+            align-items: flex-start;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 15px;
+            height: 75px;
+            width: 100%;
+        }
+
+        .title-area {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+        }
+
+        .main-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(90deg, #0284c7, #0d9488); /* Blue to Teal Gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .sub-title {
+            font-size: 13px;
+            color: #64748b; /* Slate-500 */
+            font-weight: 500;
+            margin-top: 2px;
+            letter-spacing: 0.5px;
+        }
+
+        .project-meta-tags {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: flex-end;
+            width: 30%;
+        }
+
+        .meta-tag {
+            background: #f0f9ff; /* Soft sky light background */
+            border: 1px solid #bae6fd;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #0369a1; /* Sky-700 */
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* STRATEGIC EXECUTIVE BANNER */
+        .executive-banner {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 20px;
+            background: #f8fafc; /* Soft slate gray background */
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #0284c7; /* Strong sky blue line */
+            border-radius: 8px;
+            padding: 12px 20px;
+            height: 70px;
+            align-items: center;
+        }
+
+        .banner-segment {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .segment-label {
+            font-size: 10px;
+            font-weight: 700;
+            color: #0369a1;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .segment-content {
+            font-size: 12px;
+            color: #334155; /* Slate-700 */
+            line-height: 1.4;
+        }
+
+        /* MAIN THREE-COLUMN DASHBOARD GRID */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            height: 485px;
+            margin-top: 15px;
+        }
+
+        /* Card Panels Container */
+        .dashboard-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .panel-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border-radius: 12px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Standard Height Budgets */
+        .col-1 .panel-card.top { height: 260px; }
+        .col-1 .panel-card.bottom { height: 205px; }
+
+        .col-2 .panel-card.top { height: 380px; }
+        .col-2 .panel-card.bottom { height: 85px; }
+
+        .col-3 .panel-card.top { height: 200px; }
+        .col-3 .panel-card.bottom { height: 285px; }
+
+        /* Unified Panel Headers */
+        .panel-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 8px;
+        }
+
+        .panel-header i {
+            font-size: 14px;
+            color: #0284c7;
+        }
+
+        .panel-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* List Items inside Cards */
+        .list-container {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .list-item {
+            font-size: 12px;
+            line-height: 1.4;
+            color: #334155;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .list-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #0284c7;
+            font-size: 14px;
+        }
+
+        .list-item strong {
+            color: #0284c7;
+            font-weight: 600;
+        }
+
+        /* Pipeline Visual Elements */
+        .pipeline-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            flex-grow: 1;
+            justify-content: center;
+            padding: 2px 0;
+        }
+
+        .pipeline-step {
+            display: flex;
+            align-items: center;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 5px 10px;
+            gap: 10px;
+            position: relative;
+        }
+
+        .step-num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            color: #0d9488;
+            background: #f0fdf4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            width: 20px;
+            text-align: center;
+        }
+
+        .step-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step-title {
+            font-size: 10.5px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .step-desc {
+            font-size: 10px;
+            color: #475569;
+        }
+
+        .pipeline-arrow {
+            text-align: center;
+            font-size: 7px;
+            color: #0284c7;
+            opacity: 0.6;
+            margin: -3px 0;
+        }
+
+        /* Tech Stack Footer Tags */
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .tech-pill {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 10.5px;
+            font-weight: 600;
+            color: #334155;
+            text-transform: uppercase;
+        }
+
+        .tech-pill.highlight {
+            background: #f0f9ff;
+            border-color: #bae6fd;
+            color: #0284c7;
+        }
+
+        /* Value Matrix Table */
+        .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+            margin-top: 5px;
+        }
+
+        .matrix-table th, .matrix-table td {
+            padding: 6px 8px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .matrix-table th {
+            color: #64748b;
+            font-weight: 600;
+            font-size: 9.5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .matrix-table td {
+            color: #334155;
+        }
+
+        .matrix-table td strong {
+            color: #0d9488; /* Emerald teal confirmation */
+            font-weight: 600;
+        }
+
+        .matrix-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Roadmap Phase Styling */
+        .roadmap-timeline {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            flex-grow: 1;
+            margin-top: 5px;
+        }
+
+        .roadmap-phase {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 8px 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .phase-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .phase-num {
+            font-size: 9px;
+            font-weight: 700;
+            color: #0d9488;
+            background: #e6f4ea;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .phase-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .phase-body {
+            font-size: 9.5px;
+            color: #64748b;
+            line-height: 1.3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slide-container" id="slide1">
+    
+    <!-- Header Block -->
+    <header class="slide-header">
+        <div class="title-area">
+            <h1 class="main-title">AI-Powered Executive Analytics Copilot</h1>
+            <span class="sub-title">Git Repo Project Showcase &amp; Architectural Specification Overview</span>
+        </div>
+        <div class="project-meta-tags">
+            <span class="meta-tag">GenAI Transformation</span>
+            <span class="meta-tag">Decision Intelligence</span>
+            <span class="meta-tag">Multi-Modal AI</span>
+        </div>
+    </header>
+
+    <!-- Strategic Alignment Horizontal Banner -->
+    <section class="executive-banner">
+        <div class="banner-segment">
+            <span class="segment-label">Executive Brief</span>
+            <p class="segment-content">This automated multi-modal system converts raw screen layouts into actionable natural language decision summaries, removing complexity from static executive dashboard interactions.</p>
+        </div>
+        <div class="banner-segment">
+            <span class="segment-label">Strategic Shift &amp; Vision</span>
+            <p class="segment-content">Shifting BI telemetry boundaries from static, passive data presentation to automated, proactive conversational decision intelligence models.</p>
+        </div>
+    </section>
+
+    <!-- Main Dashboard Grid -->
+    <main class="dashboard-grid">
+        
+        <!-- COLUMN 1: CHALLENGES & VALUE REALIZATION -->
+        <div class="dashboard-col col-1">
+            <!-- Business Challenges Box -->
+            <article class="panel-card top">
+                <div class="panel-header">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <h3 class="panel-title">Business Challenges</h3>
+                </div>
+                <ul class="list-container">
+                    <li class="list-item"><strong>Dashboard Overload:</strong> Floods of fragmented metrics across regional visual portals create severe executive cognitive overload.</li>
+                    <li class="list-item"><strong>Interpretation Bottlenecks:</strong> Lack of automated, real-time context delays active business outlier parsing and root cause extraction.</li>
+                    <li class="list-item"><strong>Developer Dependency:</strong> Critical business context loops are locked behind manual analyst workflows and developer ticket backlogs.</li>
+                </ul>
+            </article>
+            
+            <!-- Value Realization Matrix Box -->
+            <article class="panel-card bottom">
+                <div class="panel-header">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3 class="panel-title">Value Realization Matrix</h3>
+                </div>
+                <table class="matrix-table">
+                    <thead>
+                        <tr>
+                            <th>Operational Area</th>
+                            <th>Target State Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Insight Generation Speed</td>
+                            <td><strong>Instant Real-Time Output</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Executive Decision Reporting</td>
+                            <td><strong>100% Automated Outlines</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Dashboard Adoption Rate</td>
+                            <td><strong>Substantially Maximized</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Analyst Ticket Backlogs</td>
+                            <td><strong>Drastically Diminished</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </div>
+
+        <!-- COLUMN 2: ARCHITECTURE & TECHNICAL DATA PIPELINE -->
+        <div class="dashboard-col col-2">
+            <!-- Interactive Data Pipeline View -->
+            <article class="panel-card top">
+                <div class="panel-header">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <h3 class="panel-title">Core AI Pipeline &amp; Architecture</h3>
+                </div>
+                <div class="pipeline-flow">
+                    <div class="pipeline-step">
+                        <span class="step-num">01</span>
+                        <div class="step-info">
+                            <span class="step-title">Dashboard Telemetry Data</span>
+                            <span class="step-desc">Target raw screen metric layouts and metrics tables extraction</span>
+                        </div>
+                    </div>
+                    <div class="pipeline-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                    
+                    <div class="pipeline-step">
+                        <span class="step-num">02</span>
+                        <div class="step-info">
+                            <span class="step-title">AI Vision + LLM Parser</span>
+                            <span class="step-desc">Multi-modal visual understanding and grid structure comprehension</span>
+                        </div>
+                    </div>
+                    <div class="pipeline-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                    
+                    <div class="pipeline-step">
+                        <span class="step-num">03</span>
+                        <div class="step-info">
+                            <span class="step-title">KPI Context Engine</span>
+                            <span class="step-desc">Correlates operational parameters to enterprise business dictionaries</span>
+                        </div>
+                    </div>
+                    <div class="pipeline-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                    
+                    <div class="pipeline-step">
+                        <span class="step-num">04</span>
+                        <div class="step-info">
+                            <span class="step-title">Insight Generation</span>
+                            <span class="step-desc">Algorithmic outlier identification and tactical trend synthesis</span>
+                        </div>
+                    </div>
+                    <div class="pipeline-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+                    
+                    <div class="pipeline-step">
+                        <span class="step-num">05</span>
+                        <div class="step-info">
+                            <span class="step-title">Executive Summary Delivery</span>
+                            <span class="step-desc">Direct output of concise, conversational decision outlines</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Technology Stack Footer -->
+            <article class="panel-card bottom">
+                <div class="tech-tags-wrapper">
+                    <div class="tech-tags">
+                        <span class="tech-pill highlight">Python</span>
+                        <span class="tech-pill highlight">Streamlit</span>
+                        <span class="tech-pill">OpenAI API</span>
+                        <span class="tech-pill">LangChain</span>
+                        <span class="tech-pill">Prompt Eng</span>
+                        <span class="tech-pill">GenAI Pattern</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- COLUMN 3: SOLUTION CAPABILITIES & ROADMAP -->
+        <div class="dashboard-col col-3">
+            <!-- Platform Solution Offerings Box -->
+            <div class="panel-card top">
+                <div class="panel-header">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <h3 class="panel-title">Platform Core Capabilities</h3>
+                </div>
+                <ul class="list-container">
+                    <li class="list-item"><strong>Intelligent Summaries:</strong> Automatic conversion of dense dashboards into concise textual briefs.</li>
+                    <li class="list-item"><strong>Anomaly Alerts:</strong> Algorithmic logic mapping outlier events to specific visual parameters.</li>
+                    <li class="list-item"><strong>Contextual Querying:</strong> Interactive natural language database search grounded inside screen context.</li>
+                </ul>
+            </div>
+            
+            <!-- Scale & Integration Roadmap -->
+            <article class="panel-card bottom">
+                <div class="panel-header">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <h3 class="panel-title">Future Roadmap &amp; Scale</h3>
+                </div>
+                <div class="roadmap-timeline">
+                    <!-- Phase 1 -->
+                    <div class="roadmap-phase">
+                        <div class="phase-header">
+                            <span class="phase-title">PHASE 1</span>
+                            <span class="phase-num">v1.0</span>
+                        </div>
+                        <p class="phase-body"><strong>Interpretation:</strong> Multi-modal screen parsers and raw insight translation.</p>
+                    </div>
+                    <!-- Phase 2 -->
+                    <div class="roadmap-phase">
+                        <div class="phase-header">
+                            <span class="phase-title">PHASE 2</span>
+                            <span class="phase-num">v2.0</span>
+                        </div>
+                        <p class="phase-body"><strong>Conversational:</strong> Interactive chat interface running on underlying datasets.</p>
+                    </div>
+                    <!-- Phase 3 -->
+                    <div class="roadmap-phase">
+                        <div class="phase-header">
+                            <span class="phase-title">PHASE 3</span>
+                            <span class="phase-num">v3.0</span>
+                        </div>
+                        <p class="phase-body"><strong>Agentic Recs:</strong> Proactive background alert recommendation loops.</p>
+                    </div>
+                    <!-- Phase 4 -->
+                    <div class="roadmap-phase">
+                        <div class="phase-header">
+                            <span class="phase-title">PHASE 4</span>
+                            <span class="phase-num">v4.0</span>
+                        </div>
+                        <p class="phase-body"><strong>Autonomous:</strong> Self-governing decision-action triggers.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workforce Intelligence &amp; Sentiment Analytics - One-Pager Showcase</title>
+    <!-- Google Fonts: Space Grotesk for technical/executive headers, Inter for ultra-clean body copy -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for professional modern interface icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Tailwind CSS for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* RESET AND CORE STYLES */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #cbd5e1; /* Backdrop board context */
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Fixed Dimensions Widescreen Container (1280x720 16:9 widescreen canvas) */
+        .slide-container {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(2, 132, 199, 0.04) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(13, 148, 136, 0.03) 0%, transparent 40%);
+            color: #0f172a; /* Slate-900 */
+            padding: 30px 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="slide-container" id="slide1">
+    
+    <!-- Slide Header Block -->
+    <header class="flex justify-between items-start border-b border-slate-200 pb-[15px] h-[75px]">
+        <div class="flex flex-col">
+            <h1 class="font-display text-[26px] font-bold tracking-tight bg-gradient-to-r from-sky-600 to-teal-600 bg-clip-text text-transparent uppercase">
+                Workforce Intelligence &amp; Sentiment Analytics
+            </h1>
+            <span class="text-[12px] text-slate-500 font-semibold tracking-wider uppercase mt-1">
+                Git Repo Project Showcase • AI-Powered Employee Experience &amp; Organizational Health Monitoring
+            </span>
+        </div>
+        <div class="flex gap-2 items-center">
+            <span class="bg-sky-50 border border-sky-200 px-3 py-1.5 rounded-lg text-[10px] font-semibold text-sky-700 tracking-wider uppercase">
+                Workforce AI
+            </span>
+            <span class="bg-teal-50 border border-teal-200 px-3 py-1.5 rounded-lg text-[10px] font-semibold text-teal-700 tracking-wider uppercase">
+                Sentiment Analytics
+            </span>
+        </div>
+    </header>
+
+    <!-- Strategic Alignment & Executive Summary Horizontal Banner -->
+    <section class="grid grid-cols-12 gap-5 bg-slate-50 border border-slate-200 border-l-4 border-sky-500 rounded-lg px-5 py-3 h-[90px] items-center mt-3">
+        <div class="col-span-7 flex flex-col gap-0.5">
+            <span class="text-[10px] font-bold text-sky-700 tracking-wider uppercase flex items-center gap-1.5">
+                <i class="fa-solid fa-file-invoice"></i> Executive Brief
+            </span>
+            <p class="text-[11.5px] text-slate-600 leading-relaxed">
+                This Workforce Sentiment Platform leverages continuous multi-modal NLP parsing of unstructured reviews, feedback, and surveys to identify burnout, mapping sentiment vectors across deep department-level diagnostic views.
+            </p>
+        </div>
+        <div class="col-span-5 flex flex-col gap-0.5 pl-4 border-l border-slate-200">
+            <span class="text-[10px] font-bold text-teal-700 tracking-wider uppercase flex items-center gap-1.5">
+                <i class="fa-solid fa-arrows-spin"></i> Strategic Shift &amp; Vision
+            </span>
+            <p class="text-[11.5px] text-slate-600 leading-relaxed">
+                Shifting workforce operations from slow, reactive annual surveys to continuous organizational intelligence and proactive burnout mitigation across enterprise networks.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Three-Column Dashboard Grid -->
+    <main class="grid grid-cols-3 gap-5 h-[485px] mt-3">
+        
+        <!-- COLUMN 1: STRATEGIC CONTRAST & VALUE REALIZATION -->
+        <div class="flex flex-col justify-between h-full">
+            
+            <!-- Business Challenges Box -->
+            <article class="bg-white border border-slate-200 shadow-sm rounded-xl p-5 flex flex-col h-[255px]">
+                <div class="flex items-center gap-2 border-b border-slate-100 pb-2 mb-3">
+                    <i class="fa-solid fa-triangle-exclamation text-sky-600 text-[14px]"></i>
+                    <h3 class="font-display text-[13px] font-bold text-slate-900 tracking-wide uppercase">
+                        Business Challenges
+                    </h3>
+                </div>
+                <ul class="flex flex-col gap-2.5">
+                    <li class="text-[11.5px] text-sky-700 leading-relaxed pl-4 relative">
+                        <span class="absolute left-0 top-0 text-sky-600 font-bold">•</span>
+                        <strong>Low Visibility:</strong><span class="text-slate-600"> Fragmented engagement metrics scattered across disparate communication channels, reviews, and isolated feedback surveys.</span>
+                    </li>
+                    <li class="text-[11.5px] text-sky-700 leading-relaxed pl-4 relative">
+                        <span class="absolute left-0 top-0 text-sky-600 font-bold">•</span>
+                        <strong>Manual Bottlenecks:</strong><span class="text-slate-600"> High dependency on slow, manual analyst processing of complex qualitative text data.</span>
+                    </li>
+                    <li class="text-[11.5px] text-sky-700 leading-relaxed pl-4 relative">
+                        <span class="absolute left-0 top-0 text-sky-600 font-bold">•</span>
+                        <strong>Delayed Identification:</strong><span class="text-slate-600"> Difficulty identifying structural burnout patterns or attrition risks in real time before talent is lost.</span>
+                    </li>
+                </ul>
+            </article>
+            
+            <!-- Value Realization Matrix Box -->
+            <article class="bg-white border border-slate-200 shadow-sm rounded-xl p-5 flex flex-col h-[200px]">
+                <div class="flex items-center gap-2 border-b border-slate-100 pb-2 mb-2">
+                    <i class="fa-solid fa-chart-line text-sky-600 text-[14px]"></i>
+                    <h3 class="font-display text-[13px] font-bold text-slate-900 tracking-wide uppercase">
+                        Value Realization Matrix
+                    </h3>
+                </div>
+                <table class="w-full text-left text-[11px] border-collapse">
+                    <thead class="bg-slate-50 border-b border-slate-100 text-slate-500 uppercase text-[9px] font-semibold tracking-wider">
+                        <tr>
+                            <th class="py-1.5 px-2">Operational Area</th>
+                            <th class="py-1.5 px-2">Target State Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-slate-600 divide-y divide-slate-100">
+                        <tr>
+                            <td class="py-1.5 px-2">Employee Visibility</td>
+                            <td class="py-1.5 px-2 text-teal-600 font-bold">Broadly Improved Silos</td>
+                        </tr>
+                        <tr>
+                            <td class="py-1.5 px-2">Engagement Monitoring</td>
+                            <td class="py-1.5 px-2 text-teal-600 font-bold">Enhanced Gathering Pace</td>
+                        </tr>
+                        <tr>
+                            <td class="py-1.5 px-2">Workforce Insights</td>
+                            <td class="py-1.5 px-2 text-teal-600 font-bold">Weeks to Instant Execution</td>
+                        </tr>
+                        <tr>
+                            <td class="py-1.5 px-2">Attrition Risk Detection</td>
+                            <td class="py-1.5 px-2 text-teal-600 font-bold">Substantially Earlier Alerts</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </div>
+
+        <!-- COLUMN 2: ARCHITECTURE & TECHNICAL DATA PIPELINE -->
+        <div class="flex flex-col justify-between h-full">
+            
+            <!-- Solution Architecture & Data Pipeline -->
+            <article class="bg-white border border-slate-200 shadow-sm rounded-xl p-5 flex flex-col h-[375px]">
+                <div class="flex items-center gap-2 border-b border-slate-100 pb-2 mb-4">
+                    <i class="fa-solid fa-diagram-project text-sky-600 text-[14px]"></i>
+                    <h3 class="font-display text-[13px] font-bold text-slate-900 tracking-wide uppercase">
+                        Solution Architecture &amp; Data Pipeline
+                    </h3>
+                </div>
+                <div class="flex flex-col gap-2 flex-grow justify-center">
+                    <div class="flex items-center gap-3 bg-slate-50 border border-slate-100 rounded-lg p-2 relative">
+                        <span class="font-display text-[11px] font-bold text-teal-700 bg-teal-50 px-2 py-1 rounded w-[25px] text-center">01</span>
+                        <div class="flex flex-col">
+                            <span class="text-[11.5px] font-semibold text-slate-900 leading-tight">Employee Feedback</span>
+                            <span class="text-[10px] text-slate-500">Continuous ingestion of feedback surveys, reviews &amp; communication logs</span>
+                        </div>
+                    </div>
+                    <div class="text-center text-[1px] text-slate-400 opacity-60"><i class="fa-solid fa-chevron-down"></i></div>
+                    
+                    <div class="flex items-center gap-3 bg-slate-50 border border-slate-100 rounded-lg p-2 relative">
+                        <span class="font-display text-[11px] font-bold text-teal-700 bg-teal-50 px-2 py-1 rounded w-[25px] text-center">02</span>
+                        <div class="flex flex-col">
+                            <span class="text-[11.5px] font-semibold text-slate-900 leading-tight">AI NLP Parsing Engine</span>
+                            <span class="text-[10px] text-slate-500">Contextual language understanding, tone grading &amp; intent profiling</span>
+                        </div>
+                    </div>
+                    <div class="text-center text-[1px] text-slate-400 opacity-60"><i class="fa-solid fa-chevron-down"></i></div>
+                    
+                    <div class="flex items-center gap-3 bg-slate-50 border border-slate-100 rounded-lg p-2 relative">
+                        <span class="font-display text-[11px] font-bold text-teal-700 bg-teal-50 px-2 py-1 rounded w-[25px] text-center">03</span>
+                        <div class="flex flex-col">
+                            <span class="text-[11.5px] font-semibold text-slate-900 leading-tight">Trend &amp; Pattern Mapping</span>
+                            <span class="text-[10px] text-slate-500">Algorithmic sorting of emergent topics &amp; cohort-based risk flags</span>
+                        </div>
+                    </div>
+                    <div class="text-center text-[1px] text-slate-400 opacity-60"><i class="fa-solid fa-chevron-down"></i></div>
+                    
+                    <div class="flex items-center gap-3 bg-slate-50 border border-slate-100 rounded-lg p-2 relative">
+                        <span class="font-display text-[11px] font-bold text-teal-700 bg-teal-50 px-2 py-1 rounded w-[25px] text-center">04</span>
+                        <div class="flex flex-col">
+                            <span class="text-[11.5px] font-semibold text-slate-900 leading-tight">Prescriptive Insight Delivery</span>
+                            <span class="text-[10px] text-slate-400">Automated warning thresholds, executive briefs &amp; retention guidance</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Tech Stack Footer -->
+            <article class="bg-white border border-slate-200 shadow-sm rounded-xl p-3 flex items-center justify-center h-[80px]">
+                <div class="flex flex-wrap gap-1.5 justify-center items-center">
+                    <span class="bg-slate-100 border border-slate-200 text-slate-700 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Python</span>
+                    <span class="bg-sky-50 border border-sky-200 text-sky-700 px-2 py-0.5 rounded text-[10px] font-bold uppercase">OpenAI API</span>
+                    <span class="bg-slate-100 border border-slate-200 text-slate-700 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">LangChain</span>
+                    <span class="bg-slate-100 border border-slate-200 text-slate-700 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Streamlit</span>
+                    <span class="bg-sky-50 border border-sky-200 text-sky-700 px-2 py-0.5 rounded text-[10px] font-bold uppercase">NLP Engines</span>
+                    <span class="bg-slate-100 border border-slate-200 text-slate-700 px-2 py-0.5 rounded text-[10px] font-semibold uppercase">Data Viz</span>
+                </div>
+            </article>
+        </div>
+
+        <!-- COLUMN 3: PLATFORM SOLUTION & ROADMAP -->
+        <div class="flex flex-col justify-between h-full">
+            
+            <!-- Platform Solution Offerings Box -->
+            <article class="bg-white border border-slate-200 shadow-sm rounded-xl p-5 flex flex-col h-[195px]">
+                <div class="flex items-center gap-2 border-b border-slate-100 pb-2 mb-3">
+                    <i class="fa-solid fa-wand-magic-sparkles text-sky-600 text-[14px]"></i>
+                    <h3 class="font-display text-[13px] font-bold text-slate-900 tracking-wide uppercase">
+                        Platform Core Capabilities
+                    </h3>
+                </div>
+                <ul class="flex flex-col gap-2">
+                    <li class="text-[11px] text-sky-700 leading-relaxed pl-3 relative">
+                        <span class="absolute left-0 top-0 text-sky-600 font-bold">•</span>
+                        <strong>Sentiment Analysis:</strong><span class="text-slate-600"> Multi-modal NLP processing of survey text to interpret contextual tone.</span>
+                    </li>
+                    <li class="text-[11px] text-sky-700 leading-relaxed pl-3 relative">
+                        <span class="absolute left-0 top-0 text-sky-600 font-bold">•</span>
+                        <strong>Theme Extraction:</strong><span class="text-slate-600"> Algorithmic sorting of user topics and emergent cultural trends.</span>
+                    </li>
+                    <li class="text-[11px] text-sky-700 leading-relaxed pl-3 relative">
+                        <span class="absolute left-0 top-0 text-sky-600 font-bold">•</span>
+                        <strong>Department Deep Dives:</strong><span class="text-slate-600"> Mapped group sentiment vectors and cohort tracking.</span>
+                    </li>
+                </ul>
+            </article>
+            
+            <!-- Scale & Integration Roadmap -->
+            <article class="bg-white border border-slate-200 shadow-sm rounded-xl p-5 flex flex-col h-[280px] justify-between">
+                <div class="flex items-center gap-2 border-b border-slate-100 pb-2">
+                    <i class="fa-solid fa-map-location-dot text-sky-600 text-[14px]"></i>
+                    <h3 class="font-display text-[13px] font-bold text-slate-900 tracking-wide uppercase">
+                        Future Roadmap &amp; Scale
+                    </h3>
+                </div>
+                <div class="grid grid-cols-2 gap-2 mt-2">
+                    <!-- Phase 1 -->
+                    <div class="bg-slate-50 border border-slate-100 rounded-lg p-2 flex flex-col justify-between min-h-[92px]">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-[9px] font-bold text-slate-900">PHASE 1</span>
+                            <span class="text-[8px] font-bold text-teal-700 bg-teal-50 px-1 py-0.5 rounded">v1.0</span>
+                        </div>
+                        <p class="text-[9px] text-slate-500 leading-relaxed">
+                            <strong>Foundation:</strong> Core pipeline setup for basic sentiment analysis layers.
+                        </p>
+                    </div>
+                    <!-- Phase 2 -->
+                    <div class="bg-slate-50 border border-slate-100 rounded-lg p-2 flex flex-col justify-between min-h-[92px]">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-[9px] font-bold text-slate-900">PHASE 2</span>
+                            <span class="text-[8px] font-bold text-teal-700 bg-teal-50 px-1 py-0.5 rounded">v2.0</span>
+                        </div>
+                        <p class="text-[9px] text-slate-500 leading-relaxed">
+                            <strong>Cohorts:</strong> Segmented department and team-level diagnostic view panels.
+                        </p>
+                    </div>
+                    <!-- Phase 3 -->
+                    <div class="bg-slate-50 border border-slate-100 rounded-lg p-2 flex flex-col justify-between min-h-[92px]">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-[9px] font-bold text-slate-900">PHASE 3</span>
+                            <span class="text-[8px] font-bold text-teal-700 bg-teal-50 px-1 py-0.5 rounded">v3.0</span>
+                        </div>
+                        <p class="text-[9px] text-slate-500 leading-relaxed">
+                            <strong>Predictive:</strong> Modeling attrition risk triggers and early structural warnings.
+                        </p>
+                    </div>
+                    <!-- Phase 4 -->
+                    <div class="bg-slate-50 border border-slate-100 rounded-lg p-2 flex flex-col justify-between min-h-[92px]">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-[9px] font-bold text-slate-900">PHASE 4</span>
+                            <span class="text-[8px] font-bold text-teal-700 bg-teal-50 px-1 py-0.5 rounded">v4.0</span>
+                        </div>
+                        <p class="text-[9px] text-slate-500 leading-relaxed">
+                            <strong>Autonomous:</strong> Agentic advisory loops suggesting interventions to managers.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </main>
+
+
+</div>
+
+</body>
+</html>
